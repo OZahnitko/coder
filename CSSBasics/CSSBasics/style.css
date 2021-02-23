@@ -1,0 +1,47 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 20px 20px 0 20px;
+}
+
+.bandImage {
+  width: 100%;
+}
+
+.bioContainer {
+  display: inline-block;
+}
+
+.bioImage {
+  display: block;
+}
+
+.headerLink {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.headerLink:active {
+  color: orangered;
+  text-decoration: overline;
+}
+
+.navBar {
+  background-color: dodgerblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  text-transform: uppercase;
+}
