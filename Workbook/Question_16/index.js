@@ -68,7 +68,9 @@ const formatOutput = (input) => {
           weight
             ? chalk.bgGreen(`Your score increased by ${weight} points.`)
             : chalk.bgRed(
-                "We don't need that trash, so it will not reflect your score."
+                `We don't need that ${chalk.bold(
+                  "TRASH"
+                )}, so it will not reflect your score.`
               )
         }`
     )
@@ -91,7 +93,11 @@ const formatOutput = (input) => {
         )
         .map(
           ({ codingSkill, weight }) =>
-            `${codingSkill}, which would increase your score by ${weight}`
+            `${codingSkill}, which would increase your score by ${weight}, bringing your total to ${chalk.bgGreen(
+              input.reduce((acc, { weight }) => {
+                return acc + weight;
+              }, 0) + weight
+            )}.`
         )
         .join("\n")
     );
