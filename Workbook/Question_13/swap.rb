@@ -8,9 +8,8 @@ i += 1 while (i < arr.size - 1) && (arr[i] < arr[i + 1])
 
 puts i
 
-puts arr[i]
+temp = arr[i]
 arr[i] = arr[i + 1]
-puts arr[i]
-arr[i + 1] = arr[i]
+arr[i + 1] = temp
 
 puts arr
