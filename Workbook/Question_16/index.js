@@ -17,9 +17,6 @@ const skillsData = [
   { codingSkill: "CSS", weight: 64 },
   { codingSkill: "JavaScript", weight: 128 },
 ];
-//TODO: Check only the individual items, i.e. maybe a user made a mistake in a single string, no need to reject the whole.
-//TODO: Check for empty input strings
-//TODO: Allow for multiple inputs - don't close stdin
 
 const askQuestion = () => {
   rl.question("Enter your coding skills: ", (answer) => {
@@ -66,13 +63,13 @@ const formatOutput = (input) => {
           weight ? chalk.green(codingSkill) : chalk.red(codingSkill)
         }". ${
           weight
-            ? chalk.bgGreen(`Your score increased by ${weight} points.`)
+            ? chalk.bgGreen(`Your score increased by ${weight} points`)
             : chalk.bgRed(
                 `We don't need that ${chalk.bold(
                   "TRASH"
-                )}, so it will not reflect your score.`
+                )}, so it will not reflect your score`
               )
-        }`
+        }.`
     )
     .join("\n")
     .concat(
